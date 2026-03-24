@@ -3,24 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
-</html>
+    <title>Upcoming Events</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 20px;
+        padding: 0;
+      }
 
-<script>
-  const eventObj = {
-    date: "2026-06-10",
-    time: "18:30",
-    sport: "Football",
-    home: "Team A",
-    away: "Team B",
-  };
-  const test = fetch("http://localhost:3000/api/events", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(eventObj),
-  })
-    .then((res) => res.json())
-    .then((data) => console.log(data));
-</script>
+      nav {
+        background: #222;
+        padding: 10px;
+      }
+
+      .inner-navbar ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+      }
+
+      .inner-navbar a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .inner-navbar a.active {
+        color: #00bcd4;
+        font-weight: bold;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="inner-navbar">
+        <ul>
+          <li><a href="#" class="active">Events</a></li>
+          <li><a href="#">Add Events</a></li>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="events-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

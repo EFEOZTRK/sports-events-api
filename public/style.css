@@ -1,0 +1,46 @@
+#events-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.event-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition:  0.2s;
+}
+
+.event-card h3 {
+  margin: 0 0 10px;
+  color: #0077cc;
+}
+
+.event-card p {
+  margin: 5px;
+}
+
+.event-card .description {
+  color: #555;
+  margin-top: 10px;
+}
+
+.teams {
+  font-weight: bold;
+}
+
+.datetime {
+  color: #555;
+}
+
+.venue {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+  transition: 0.2s;
+}
