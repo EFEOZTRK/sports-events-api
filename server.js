@@ -14,6 +14,7 @@ app.use(express.static("public"))
 
 
 app.get("/test", (req,res)=>{
+    console.log("It logs");
     return res.json({message: "Server runs!"})
 })
 
