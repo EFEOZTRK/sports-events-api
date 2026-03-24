@@ -49,3 +49,22 @@ export function getAllEvents(){
 
         return retrieveData.all();
 }
+
+export function getEventById(id){
+    const retrieveData = db.prepare(`
+        SELECT
+        events.id,
+        events.date,
+        events.time,
+        sports.name AS sport,
+        events.home,
+        events.away,
+        events.venue,
+        events.description
+        FROM events
+        JOIN sports ON events._sportId = sports.id
+        WHERE events.id = ?
+        `)
+
+        return retrieveData.get(id)
+}
