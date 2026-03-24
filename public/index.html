@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  const eventObj = {
+    date: "2026-06-10",
+    time: "18:30",
+    sport: "Football",
+    home: "Team A",
+    away: "Team B",
+  };
+  const test = fetch("http://localhost:3000/api/events", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(eventObj),
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+</script>
