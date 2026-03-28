@@ -13,10 +13,10 @@ app.use(express.json())
 app.use(express.static("public"))
 
 
-app.get("/test", (req,res)=>{
-    console.log("It logs");
-    return res.json({message: "Server runs!"})
-})
+// app.get("/test", (req,res)=>{
+//     console.log("It logs");
+//     return res.json({message: "Server runs!"})
+// })
 
 // Use routes
 app.use("/api",eventsRoutes)

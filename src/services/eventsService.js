@@ -4,7 +4,7 @@ import db from "../db/database.js"
 export function createEvent(event){
     const {date,time,sport,home,away,venue,description} = event;
 
-    if(!sport || typeof sport !== "string"){
+    if(!sport.trim() || typeof sport !== "string"){
         throw new Error("Invalid sport")
     }
 
