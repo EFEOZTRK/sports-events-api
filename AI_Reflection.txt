@@ -1,0 +1,21 @@
+AI Usage Reflection
+
+During the development of this project, I used AI as a supportive tool to assist with problem-solving, debugging, and improving code structure.
+
+AI was mostly used for:
+- Clarifying concepts such as SQL joins and database relationships
+- Debugging errors and understanding their causes, Mostly used for small typos that are hard to be seen in this assignment.
+- Improving code structure (e.g., separating routes, controllers, and services)
+- Generating small code snippets mostly for HTML and CSS, which I reviewed and understood.
+
+I do not copy paste any code that I do not understand in my projects, including this assignment of course.
+
+In particular, I ensured that I fully understand:
+- The database schema and normalization approach
+- Using SQL JOIN
+- The logic for creating events and handling sports dynamically
+- The flow between frontend and backend (API requests and responses)
+
+AI was used as a learning and productivity tool, not as a replacement for my own understanding or decision-making.
+
+All final code decisions, structure, and implementation details were made and verified by me.
