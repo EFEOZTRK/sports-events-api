@@ -87,3 +87,28 @@
   border: none;
   font-size: 18px;
 }
+/* Filter container css start */
+#filter-container {
+  margin: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+#filter-container #sport-filter{
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#filter-container button{
+  padding: 6px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #0077ccac;
+  transition: 0.2s;
+}
+
+#filter-container button:hover{
+  transform: translateY(-2px);
+}

@@ -1,4 +1,4 @@
-
+let allEvents = []
 
 async function fetchEvents(){
     try{
@@ -6,7 +6,7 @@ async function fetchEvents(){
      const data = await res.json();
 
      console.log(data)
-     
+     allEvents = data.events
      renderEvents(data.events)
     }
     catch(err){
@@ -82,5 +82,25 @@ form.addEventListener("submit", async (e) => {
 
   // refetch events after adding a new one
   fetchEvents();
+});
+
+// Filter functionality
+
+const applyBtn = document.getElementById("apply-filter");
+const clearBtn = document.getElementById("clear-filter");
+
+applyBtn.addEventListener("click", () => {
+  const value = document.getElementById("sport-filter").value.toLowerCase();
+
+  const filtered = allEvents.filter(event =>
+    event.sport.toLowerCase().includes(value)
+  );
+
+  renderEvents(filtered);
+});
+
+clearBtn.addEventListener("click", () => {
+  document.getElementById("sport-filter").value = "";
+  renderEvents(allEvents);
 });
 
