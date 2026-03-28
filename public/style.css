@@ -44,3 +44,46 @@
   transform: translateY(-2px);
   transition: 0.2s;
 }
+
+/* Event adding form */
+
+#open-form-btn {
+  margin: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+#form-container {
+  position: fixed;
+  top: 0;
+  left: -350px;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  border-right: 1px solid #ccc;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+#form-container.active {
+  left: 0;
+}
+
+#event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#event-form input,
+#event-form textarea {
+  padding: 8px;
+}
+
+#close-form-btn {
+  align-self: flex-end;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 18px;
+}

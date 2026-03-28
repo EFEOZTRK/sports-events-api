@@ -3,14 +3,14 @@ import { getAllEvents } from "../services/eventsService.js"
 import { getEventById } from "../services/eventsService.js"
 
 export function addEvent(req,res){
-    const {date,time,sport,home,away} = req.body
+    const {date,time,sport,home,away,venue,description} = req.body
 
     if(!date || !time || !sport || !home || !away){
         return res.status(400).json({error: "Please fill every field! "})
     }
 
     try{
-        const newEvent = createEvent({date,time,sport,home,away})
+        const newEvent = createEvent({date,time,sport,home,away,venue,description})
         return res.status(201).json({message: "Event created successfully", event: newEvent})
     }
     catch(err){
