@@ -143,10 +143,11 @@ In a production system, filtering would mostly be handled on the backend.
 ## 📈 Possible Improvements
 
 - Add authentication and role-based access (admin/user)
-- Move filtering to backend queries
+- Move filtering to backend queries and add more filter options
 - Add more advanced input validation
 - Add pagination for large datasets
 - Improve UI/UX with React or a similar framework
+- Add updating event and deleting event functionality. 
 - Add automated tests
 
 ---
