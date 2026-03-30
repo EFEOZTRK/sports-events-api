@@ -79,6 +79,27 @@ This avoids duplication of sport names and ensures consistent data.
 4. Open in browser: http://localhost:3000
 
 ---
+🧪 Testing
+
+Basic API tests are implemented using Jest and Supertest.
+
+The tests cover core endpoints such as:
+
+- GET /api/events
+- POST /api/events
+
+Tests are written to be deterministic by creating data within the test itself instead of relying on existing database state.
+
+⚙️ Running Tests
+
+npm install
+npm test
+
+Notes:
+- Since the project uses ES Modules, tests are executed using Node’s experimental VM modules support.
+- NODE_ENV variable is set so server won't run while tests are running.
+- Since the database may be empty on initial runs, tests are designed to create the required data before making assertions.
+- For simplicity, tests use the same SQLite database as the application. In a production environment, a separate test database or mocking strategy would be used to avoid modifying real data.
 
 ## 🧠 Design Decisions & Assumptions
 
@@ -140,6 +161,12 @@ In a production system, filtering would mostly be handled on the backend.
 
 ---
 
+### 6. Implementing Tests
+
+Since the database may be empty on initial runs, tests are designed to create the required data before making assertions.
+
+For simplicity, tests use the same SQLite database as the application. In a production environment, a separate test database or mocking strategy would be used to avoid modifying real data.
+
 ## 📈 Possible Improvements
 
 - Add authentication and role-based access (admin/user)
@@ -148,7 +175,7 @@ In a production system, filtering would mostly be handled on the backend.
 - Add pagination for large datasets
 - Improve UI/UX with React or a similar framework
 - Add updating event and deleting event functionality. 
-- Add automated tests
+- Expand automated test covarage
 
 ---
 
