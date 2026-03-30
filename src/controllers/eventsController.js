@@ -21,9 +21,9 @@ export function addEvent(req,res){
 export function getEvents(req,res){
     try{
         const events = getAllEvents()
-
-        if(!events){
-            res.status(404).json({error: "Events not found!"})
+    
+        if(!events || events.length === 0){
+           return res.status(404).json({error: "Events not found!"})
         }
 
         return res.status(200).json({events})

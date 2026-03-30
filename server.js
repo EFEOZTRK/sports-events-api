@@ -4,7 +4,7 @@ import db from "./src/db/database.js"
 //Route imports
 import eventsRoutes from "./src/routes/eventsRoutes.js"
 
-const app = express()
+export const app = express()
 
 const PORT = 3000;
 
@@ -21,8 +21,11 @@ app.use(express.static("public"))
 // Use routes
 app.use("/api",eventsRoutes)
 
-
-
-app.listen(PORT,()=>{
+// Set a variable NODE_ENV = "test" so server wont run while tests are running
+if(process.env.NODE_ENV !== "test"){
+    app.listen(PORT,()=>{
     console.log(`Server is running on http://localhost:${PORT}`);
 })
+}
+
+
