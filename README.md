@@ -92,8 +92,8 @@ Tests are written to be deterministic by creating data within the test itself in
 
 ⚙️ Running Tests
 
-npm install
-npm test
+- npm install
+- npm test
 
 Notes:
 - Since the project uses ES Modules, tests are executed using Node’s experimental VM modules support.
